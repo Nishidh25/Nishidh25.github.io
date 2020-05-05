@@ -88,7 +88,7 @@ a {
   transition: all 0.3s ease-in-out;
 }
 a:hover {
-  color: #1b1b1b;
+  color: #121212;
   text-decoration: none;
 }
 a:focus {
@@ -281,7 +281,7 @@ pre {
   }
 }
 #preloader {
-  background: #1b1b1b;
+  background: #121212;
   height: 100%;
   position: fixed;
   width: 100%;
@@ -307,7 +307,7 @@ pre {
 header.desktop-header-1 {
   color: #FFF;
   border-right: solid 1px rgba(255, 255, 255, 0.1);
-  background: #1b1b1b;
+  background: #121212;
   padding: 50px 40px 40px;
   position: fixed;
   left: 0;
@@ -436,7 +436,7 @@ header.desktop-header-1.light .vertical-menu li .nav-link.active {
   color: #FF4C60;
 }
 header.desktop-header-1.light .vertical-menu li a {
-  color: #1b1b1b;
+  color: #121212;
 }
 header.desktop-header-1.light .vertical-menu li a:hover {
   color: #FF4C60;
@@ -446,7 +446,7 @@ header.desktop-header-1.light .vertical-menu li i {
 }
 
 header.mobile-header-1 {
-  background: #1b1b1b;
+  background: #121212;
   display: none;
   padding: 10px 0;
   -webkit-transition: all 0.3s ease-in-out;
@@ -506,10 +506,10 @@ header.mobile-header-1.light {
   background: #F9F9FF;
 }
 header.mobile-header-1.light .menu-icon span {
-  background: #1b1b1b;
+  background: #121212;
 }
 header.mobile-header-1.light .menu-icon span:before, header.mobile-header-1.light .menu-icon span:after {
-  background: #1b1b1b;
+  background: #121212;
 }
 
 
@@ -559,7 +559,7 @@ section {
 }
 
 section.home {
-  background: #1b1b1b;
+  background: #121212;
   padding: 0;
   height: 100vh;
   min-height: 100vh;
@@ -586,13 +586,13 @@ section.home.light {
   background: #F9F9FF;
 }
 section.home.light .intro h1 {
-  color: #1b1b1b;
+  color: #121212;
 }
 section.home.light .intro span {
   color: #454360;
 }
 section.home.light .social-icons li a {
-  color: #1b1b1b;
+  color: #121212;
 }
 section.home.light .social-icons li a:hover {
   color: #0080FF;
@@ -896,7 +896,7 @@ select.portfolio-filter-mobile {
   font-size: 20px;
 }
 .blog-item .details h4.title a {
-  color: #1b1b1b;
+  color: #121212;
 }
 .blog-item .details h4.title a:hover {
   color: #FF4C60;
@@ -972,10 +972,10 @@ select.portfolio-filter-mobile {
   color: #454360;
 }
 .scroll-down.light .mouse {
-  border-color: #1b1b1b;
+  border-color: #121212;
 }
 .scroll-down.light .mouse .wheel {
-  background: #1b1b1b;
+  background: #121212;
 }
 
 @-webkit-keyframes ani-mouse {
@@ -1062,7 +1062,7 @@ select.portfolio-filter-mobile {
 }
 
 footer.footer {
-  background: #1b1b1b;
+  background: #121212;
   padding: 40px 0;
   text-align: center;
 }
@@ -1080,7 +1080,7 @@ footer.footer.light {
 /*=================================================================*/
 body.dark {
   color: #FFF;
-  background-color: #1b1b1b;
+  background-color: #121212;
 }
 body.dark .section-title {
   color: #FFF;
@@ -1089,16 +1089,16 @@ body.dark .section-title:before {
   background: url("../images/dots-bg-light.svg");
 }
 body.dark .bg-dark {
-  background: #302f4e !important;
+  background: #1d1d1d !important;
 }
 body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
   color: #FFF;
 }
 body.dark .triangle-top:before {
-  border-bottom-color: #302f4e;
+  border-bottom-color: #1d1d1d;
 }
 body.dark .timeline.exp .timeline-container::after, body.dark .timeline.edu .timeline-container::after {
-  background: #302f4e;
+  background: #1d1d1d;
 }
 body.dark .portfolio-filter li {
   color: #FFF;
@@ -1119,7 +1119,7 @@ body.dark .contact-info {
   background-image: url("../images/map-light.png");
 }
 body.dark .white-popup {
-  background: #302f4e;
+  background: #1d1d1d;
 }
 body.dark footer.footer {
   border-top: solid 1px rgba(255, 255, 255, 0.1);
@@ -1253,7 +1253,7 @@ body.dark footer.footer {
   line-height: 7px;
   color: #fff;
   text-align: center;
-  background-color: #1b1b1b;
+  background-color: #121212;
   -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-transition: width 0.6s ease;
@@ -1361,7 +1361,7 @@ body.dark footer.footer {
   line-height: 32px !important;
   margin-left: 11px;
   line-height: 1.42857143;
-  color: #1a1a1a;
+  color: #1d1d1d;
   text-decoration: none;
   background-color: #fff;
   border: 1px solid #EEE;
@@ -1756,7 +1756,7 @@ body {
   }
 
   body.dark .triangle-top-sm:before {
-    border-bottom-color: #302f4e;
+    border-bottom-color: #1d1d1d;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -1777,7 +1777,7 @@ body {
   }
 
   body.dark .triangle-left-md:before {
-    border-right-color: #302f4e;
+    border-right-color: #1d1d1d;
   }
 }
 @media only screen and (max-width: 576px) {
