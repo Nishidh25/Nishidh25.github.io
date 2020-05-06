@@ -333,6 +333,16 @@ window.onload = function () {
     	return
     }
 }
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("mobile_header").style.top = "0";
+  } else {
+    document.getElementById("mobile_header").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
 
 function ToggleTheme(){
 	value = localStorage.getItem('preference-theme');
