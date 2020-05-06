@@ -20,7 +20,7 @@
 	<link rel="icon" type="image/x-icon" class = "roundit" href="images\myavatar.png">
 </head>
 
-<body class="dark">
+<body class="dark" id="body_theme">
 
 <!-- Preloader -->
 <div id="preloader">
@@ -57,26 +57,28 @@
 	</div>
 </div>
 
-<!-- mobile header 
-
-<header class="mobile-header-1">
-  <div class="container">
-    <div class="menu-icon d-inline-flex mr-4">
-      <button>
-        <span></span>
-      </button>
+<!-- mobile header --> 
+<header class="mobile-header-1 fixed-top " id = 'mobile_header'>
+	 <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark" id = 'mobile_navbar'>
+            <a class="navbar-brand" href="index.html"><h2>Welcome!</h2></a> <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNavDropdown" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto scrollspy">
+                    <li class="nav-item"><a class="nav-link" href="#home"><i class="fas fa-home"></i>&nbsp&nbsp&nbsp&nbspHome</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-user"></i>&nbsp&nbsp&nbsp&nbsp&nbspAbout</a></li>
+                </ul>
+                <span class = 'theme-switch'>Theme Toggle<button class='btn theme d-inline-flex mr-4' id ='theme-switch-btn-mobile' onclick="ToggleTheme()"><i class="fas fa-adjust"></i></button></span>
+            </div>
+        </nav>
     </div>
-  </div>
 </header>
--->
 
 <!-- desktop header -->
-<header class="desktop-header-1 d-flex align-items-start flex-column">
-	
+<header class="desktop-header-1 d-flex align-items-start flex-column" id = "desktop_head">
 	<!-- logo image -->
 	<div class="site-logo">
 		<a href="index.html">
-			<h2>Welcome.<h4>Beta</h4></h2>
+			<h2>Welcome.<h4>Site in development</h4></h2>
 		</a>
 	</div>
 	
@@ -90,7 +92,7 @@
 	
 	<!-- site footer -->
 	<div class="footer">
-		<span >Theme Toggle</span>
+		<span class = 'theme-switch'>Theme Toggle<button class='btn theme d-inline-flex mr-4' id ='theme-switch-btn' onclick="ToggleTheme()"><i class="fas fa-adjust"></i></button></span>
 	</div>
 
 </header>
@@ -280,7 +282,6 @@
 
     </div>
 		
-			
 	</section>
 	
 	<div class="spacer" data-height="96"></div>
@@ -308,5 +309,61 @@
 <script src="js\parallax.min.js"></script>
 <script src="js\jquery.magnific-popup.min.js"></script>
 <script src="js\custom.js"></script>
+<script type="text/javascript">
+
+window.onload = function () {
+	//Handles theme loading on reload
+    if (localStorage.getItem("preference-theme") === null) {
+        localStorage.setItem("preference-theme", "dark");
+    }
+    if (localStorage.getItem("preference-theme") === 'light') {
+    	// Toggle from dark to light if prefered theme is white 
+    	document.getElementById("preloader").classList.add('light');
+    	document.getElementById("mobile_header").classList.add('light');
+    	document.getElementById("mobile_navbar").classList.remove('navbar-dark');
+    	document.getElementById("mobile_navbar").classList.add('navbar-light');
+    	document.getElementById("body_theme").classList.remove('dark');
+		document.getElementById("body_theme").classList.add('light');
+		document.getElementById("desktop_head").classList.add('light');
+		document.getElementById("home").classList.add('light'); 
+		document.getElementById("theme-switch-btn-mobile").classList.add('light');
+		document.getElementById("theme-switch-btn").classList.add('light');
+	}
+    if (localStorage.getItem("preference-theme") === 'dark') {
+    	return
+    }
+}
+
+function ToggleTheme(){
+	value = localStorage.getItem('preference-theme');
+    if (value === 'dark'){
+    // Toggle from dark to light 
+    	document.getElementById("preloader").classList.add('light');
+    	document.getElementById("mobile_header").classList.add('light');
+    	document.getElementById("mobile_navbar").classList.remove('navbar-dark');
+    	document.getElementById("mobile_navbar").classList.add('navbar-light');
+    	document.getElementById("body_theme").classList.remove('dark');
+		document.getElementById("body_theme").classList.add('light');
+		document.getElementById("desktop_head").classList.add('light');
+		document.getElementById("home").classList.add('light'); 
+		document.getElementById("theme-switch-btn-mobile").classList.add('light');
+		document.getElementById("theme-switch-btn").classList.add('light');
+	   	localStorage.setItem("preference-theme", "light");
+	}
+	else if (value == 'light'){
+	// Toggle from light to dark 
+		document.getElementById("mobile_header").classList.remove('light')
+		document.getElementById("mobile_navbar").classList.remove('navbar-light');
+		document.getElementById("mobile_navbar").classList.add('navbar-dark');
+		document.getElementById("body_theme").classList.remove('light');
+		document.getElementById("body_theme").classList.add('dark');
+		document.getElementById("desktop_head").classList.remove('light');
+		document.getElementById("home").classList.remove('light');
+		document.getElementById("theme-switch-btn-mobile").classList.remove('light');
+		document.getElementById("theme-switch-btn").classList.remove('light');
+		localStorage.setItem("preference-theme", "dark");
+    }
+}
+</script>
 </body>
 </html>
