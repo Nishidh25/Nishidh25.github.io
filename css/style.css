@@ -448,7 +448,7 @@ header.desktop-header-1.light .vertical-menu li i {
 header.mobile-header-1 {
   background: #121212;
   display: none;
-  padding: 25px 0px 0px 20px;
+  padding: 0px 0;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
