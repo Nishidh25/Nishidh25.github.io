@@ -458,8 +458,7 @@ header.mobile-header-1 {
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border-bottom: solid 1px rgba(255, 255, 255, 0.1);
-  transition: top 0.3s;
-
+  transition: top 0.5s;
 }
 header.mobile-header-1.open {
   -webkit-transform: translateX(250px);
@@ -475,7 +474,6 @@ header.mobile-header-1 .menu-icon button {
   outline: 0;
   height: 33px;
   width: 33px;
-
 }
 header.mobile-header-1 .menu-icon span {
   display: block;
