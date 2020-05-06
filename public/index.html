@@ -65,6 +65,7 @@
                 <ul class="navbar-nav ml-auto scrollspy">
                     <li class="nav-item active"><a class="nav-link active" href="#home"><i class="fas fa-home"></i>&nbsp&nbsp&nbsp&nbspHome</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-user"></i>&nbsp&nbsp&nbsp&nbsp&nbspAbout</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#works"><i class="fas fa-layer-group"></i>&nbsp&nbsp&nbsp&nbsp&nbspMy Work</a></li>
                 </ul>
                 <span class = 'nav-item'><button class='btn theme' id ='theme-switch-btn-mobile' onclick="ToggleTheme()"><i class="fas fa-adjust fa-spin"></i></button>Theme Toggle</span>
             </div>
@@ -77,7 +78,7 @@
 	<!-- logo image -->
 	<div class="site-logo">
 		<a href="index.html">
-			<h2>Welcome.<h4>Site in development Beta-v1.0</h4></h2>
+			<h2>Welcome.<h4>Site in development Beta-v1.5</h4></h2>
 		</a>
 	</div>
 	
@@ -86,6 +87,7 @@
 		<ul class="vertical-menu scrollspy">
 			<li class="active"><a href="#home" class = "nav-link active"><i class="fas fa-home"></i>&nbsp&nbsp&nbsp&nbspHome</a></li>
 			<li><a href="#about"><i class="fas fa-user"></i>&nbsp&nbsp&nbsp&nbsp&nbspAbout</a></li>
+      <li><a href="#works"><i class="fas fa-layer-group"></i>&nbsp&nbsp&nbsp&nbsp&nbspMy Work</a></li>
 		</ul>
 	</nav>
 	
@@ -289,7 +291,7 @@
 		<div class="container">
 			
 			<!-- section title -->
-			<h2 class="section-title wow fadeInUp">Recent works</h2>
+			<h2 class="section-title wow fadeInUp">My Work</h2>
 
 			<div class="spacer" data-height="60"></div>
 
@@ -319,22 +321,22 @@
 				<!-- portfolio item -->
 				<div class="col-md-4 col-sm-6 grid-item courses github">
 					<!-- blog item -->
-					<div class="blog-item rounded bg-dark shadow-light wow fadeIn">
+					<div class="blog-item rounded bg-dark shadow-light wow fadeIn" id = 'dl'>
 						<div class="thumb">
 							<a href="#small-dialog" class="work-content">
-								<div class="portfolio-item rounded shadow-dark">
+								<div class="portfolio-item roundedtop shadow-dark">
 									<div class="details">
 										<span class="term">Course</span>
 										<h4 class="title">Deep Learning Specialization</h4>
 									</div>
 									<div class="thumb">
-										<img src="images/deep-learning-spec.png" alt="Portfolio-title">
+										<img src="images/deep-learning-spec.PNG" alt="Portfolio-title">
 										<div class="mask"></div>
 									</div>
 								</div>
 							</a>
 						<div id="small-dialog" class="white-popup zoom-anim-dialog mfp-hide">
-							<img src="images/deep-learning-spec.png" alt="Title">
+							<img src="images/deep-learning-spec.PNG" alt="Title">
 							<h2></h2>
 							<p></p>
 							<p></p>
@@ -359,7 +361,7 @@
 
 
 
-	<div class="spacer" data-height="96"></div>
+	<div class="spacer" data-height="196"></div>
 	
 </main>
 
@@ -407,6 +409,10 @@ window.onload = function () {
 		document.getElementById("my_info").classList.add('bg-light');
 		document.getElementById("my_info").classList.remove('shadow-light');
 		document.getElementById("my_info").classList.add('shadow-dark');
+    document.getElementById("dl").classList.remove('shadow-light');
+    document.getElementById("dl").classList.remove('bg-dark');
+    document.getElementById("dl").classList.add('shadow-dark');
+    document.getElementById("dl").classList.add('bg-light');
 	}
     if (localStorage.getItem("preference-theme") === 'dark') {
     	return
@@ -427,11 +433,11 @@ function ToggleTheme(){
 	value = localStorage.getItem('preference-theme');
     if (value === 'dark'){
     // Toggle from dark to light 
-    	document.getElementById("preloader").classList.add('light');
-    	document.getElementById("mobile_header").classList.add('light');
-    	document.getElementById("mobile_navbar").classList.remove('navbar-dark');
-    	document.getElementById("mobile_navbar").classList.add('navbar-light');
-    	document.getElementById("body_theme").classList.remove('dark');
+    document.getElementById("preloader").classList.add('light');
+    document.getElementById("mobile_header").classList.add('light');
+    document.getElementById("mobile_navbar").classList.remove('navbar-dark');
+    document.getElementById("mobile_navbar").classList.add('navbar-light');
+    document.getElementById("body_theme").classList.remove('dark');
 		document.getElementById("body_theme").classList.add('light');
 		document.getElementById("desktop_head").classList.add('light');
 		document.getElementById("home").classList.add('light'); 
@@ -441,7 +447,10 @@ function ToggleTheme(){
 		document.getElementById("my_info").classList.add('bg-light');
 		document.getElementById("my_info").classList.remove('shadow-light');
 		document.getElementById("my_info").classList.add('shadow-dark');
-
+    document.getElementById("dl").classList.remove('shadow-light');
+    document.getElementById("dl").classList.remove('bg-dark');
+    document.getElementById("dl").classList.add('shadow-dark');
+    document.getElementById("dl").classList.add('bg-light');
 	   	localStorage.setItem("preference-theme", "light");
 	}
 	else if (value == 'light'){
@@ -459,6 +468,10 @@ function ToggleTheme(){
 		document.getElementById("my_info").classList.remove('bg-light');
 		document.getElementById("my_info").classList.add('shadow-light');
 		document.getElementById("my_info").classList.remove('shadow-dark');
+    document.getElementById("dl").classList.add('shadow-light');
+    document.getElementById("dl").classList.add('bg-dark');
+    document.getElementById("dl").classList.remove('shadow-dark');
+    document.getElementById("dl").classList.remove('bg-light');
 		localStorage.setItem("preference-theme", "dark");
     }
 }
