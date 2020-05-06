@@ -448,17 +448,17 @@ header.desktop-header-1.light .vertical-menu li i {
 header.mobile-header-1 {
   background: #121212;
   display: none;
-  padding: 10px 0;
+  padding: 25px 0px 0px 20px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 header.mobile-header-1.open {
-  -webkit-transform: translateX(290px);
-  -moz-transform: translateX(290px);
-  -ms-transform: translateX(290px);
-  -o-transform: translateX(290px);
-  transform: translateX(290px);
+  -webkit-transform: translateX(250px);
+  -moz-transform: translateX(250px);
+  -ms-transform: translateX(250px);
+  -o-transform: translateX(250px);
+  transform: translateX(250px);
 }
 header.mobile-header-1 .menu-icon button {
   background: transparent;
@@ -467,6 +467,7 @@ header.mobile-header-1 .menu-icon button {
   outline: 0;
   height: 33px;
   width: 33px;
+
 }
 header.mobile-header-1 .menu-icon span {
   display: block;
@@ -606,7 +607,7 @@ section.home.light .social-icons li a:hover {
 }
 .section-title:before {
   content: "";
-  background-image: url(../images/dots-bg.svg);
+  backgrounimage: url(../images/dots-bg.svg);
   display: block;
   height: 37px;
   left: -14px;
