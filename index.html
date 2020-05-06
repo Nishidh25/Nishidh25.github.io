@@ -6,7 +6,6 @@
 	<!-- STYLESHEETS -->
 	<link rel="stylesheet" href="css\bootstrap.min.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css\all.min.css" type="text/css" media="all">
-	<link rel="stylesheet" href="css\simple-line-icons.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css\slick.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css\animate.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css\magnific-popup.css" type="text/css" media="all">
@@ -64,10 +63,10 @@
             <a class="navbar-brand" href="index.html"><h2>Welcome!</h2></a> <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNavDropdown" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto scrollspy">
-                    <li class="nav-item"><a class="nav-link" href="#home"><i class="fas fa-home"></i>&nbsp&nbsp&nbsp&nbspHome</a></li>
+                    <li class="nav-item active"><a class="nav-link active" href="#home"><i class="fas fa-home"></i>&nbsp&nbsp&nbsp&nbspHome</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-user"></i>&nbsp&nbsp&nbsp&nbsp&nbspAbout</a></li>
                 </ul>
-                <span class = 'theme-switch'>Theme Toggle<button class='btn theme d-inline-flex mr-4' id ='theme-switch-btn-mobile' onclick="ToggleTheme()"><i class="fas fa-adjust"></i></button></span>
+                <span class = 'nav-item'>Theme Toggle<button class='btn theme d-inline-flex mr-4' id ='theme-switch-btn-mobile' onclick="ToggleTheme()"><i class="fas fa-adjust fa-spin"></i></button></span>
             </div>
         </nav>
     </div>
@@ -78,7 +77,7 @@
 	<!-- logo image -->
 	<div class="site-logo">
 		<a href="index.html">
-			<h2>Welcome.<h4>Site in development</h4></h2>
+			<h2>Welcome.<h4>Site in development Beta-v1.0</h4></h2>
 		</a>
 	</div>
 	
@@ -92,7 +91,7 @@
 	
 	<!-- site footer -->
 	<div class="footer">
-		<span class = 'theme-switch'>Theme Toggle<button class='btn theme d-inline-flex mr-4' id ='theme-switch-btn' onclick="ToggleTheme()"><i class="fas fa-adjust"></i></button></span>
+		<span class = 'theme-switch'>Theme Toggle<button class='btn theme d-inline-flex mr-4' id ='theme-switch-btn' onclick="ToggleTheme()"><i class="fas fa-adjust fa-spin"></i></button></span>
 	</div>
 
 </header>
@@ -134,17 +133,17 @@
 			<!-- parallax layers -->
 			<div class="parallax" data-relative-input="true">
 
-				<i width="27" height="29" data-depth="0.3" class="fas fa-lg fa-code-branch layer p1" style="color: #339af0;"></i>
-				<i width="26" height="26" data-depth="0.2" class="fas fa-lg fa-headphones layer p2" style="color: #ef71d9;"></i>
-				<i width="30" height="25" data-depth="0.3" class="fas fa-lg fa-bug layer p3" style="color: #be4bdb;"></i>
-				<i width="15" height="23" data-depth="0.6" class="fas fa-lg fa-terminal layer p4" style="color: #fd7e14;"></i>
-				<i width="15" height="23" data-depth="0.2" class="fas fa-lg fa-user-astronaut layer p5" style="color: #20c976;"></i>				
-				<i width="49" height="17" data-depth="0.5" class="fas fa-lg fa-jedi layer p6" style="color: #82c91e;"></i>				
-				<i width="26" height="26" data-depth="0.4" class="fas fa-lg fa-gamepad layer p7" style="color: #15aabf;"></i>				
-				<i width="19" height="21" data-depth="0.3" class="fas fa-lg fa-heart layer p8" style="color: #a83f39;"></i>				
-				<i width="30" height="25" data-depth="0.3" class="fas fa-lg fa-code layer p9" style="color: #4caa6d;"></i>
-				<i width="47" height="29" data-depth="0.2" class="fab fa-lg fa-dev layer p10" style="color: #fd7e14;"></i>
-				<i width="33" height="20" data-depth="0.5" class="fas fa-lg fa-desktop layer p11" style="color: #15aabf;"></i>
+				<i data-depth="0.3" class="fas fa-lg fa-code-branch layer p1" style="color: #339af0;"></i>
+				<i data-depth="0.2" class="fas fa-lg fa-headphones layer p2" style="color: #ef71d9;"></i>
+				<i data-depth="0.3" class="fas fa-lg fa-bug layer p3" style="color: #be4bdb;"></i>
+				<i data-depth="0.6" class="fas fa-lg fa-terminal layer p4" style="color: #fd7e14;"></i>
+				<i data-depth="0.2" class="fas fa-lg fa-user-astronaut layer p5" style="color: #20c976;"></i>				
+				<i data-depth="0.5" class="fas fa-lg fa-jedi layer p6" style="color: #82c91e;"></i>				
+				<i data-depth="0.4" class="fas fa-lg fa-gamepad layer p7" style="color: #15aabf;"></i>				
+				<i data-depth="0.3" class="fas fa-lg fa-heart layer p8" style="color: #a83f39;"></i>				
+				<i data-depth="0.3" class="fas fa-lg fa-code layer p9" style="color: #4caa6d;"></i>
+				<i data-depth="0.2" class="fab fa-lg fa-dev layer p10" style="color: #fd7e14;"></i>
+				<i data-depth="0.5" class="fas fa-lg fa-desktop layer p11" style="color: #15aabf;"></i>
 
 			</div>
 		</div>
@@ -171,13 +170,13 @@
 				</div>
 
 				<div class="col-md-9 triangle-left-md triangle-top-sm">
-					<div class="rounded bg-dark shadow-light padding-30">
+					<div class="rounded bg-dark shadow-light padding-30" id = 'my_info'>
 						<div class="row">
 							<div class="col-md-6">
 								<!-- about text -->
-								<p>I am Nishidh Singh Shekhawat,a highly motivated third year MBA Tech. IT student at SVKM's NMIMS Mukesh Patel School of Technology Management, Mumbai, India. I have rich knowledge in deeplearning, also I am good with programming.</p>
+								<p>I am Nishidh Singh Shekhawat, a highly motivated third year MBA Tech. IT student at SVKM's NMIMS Mukesh Patel School of Technology Management, Mumbai, India. I have rich knowledge in deeplearning, also I am good with programming.</p>
 								<div class="mt-3">
-									<a href="#" class="btn btn-default">Download CV</a>
+									<a href="#" class="btn btn-default"><i class="fas fa-download"></i>&nbsp&nbsp&nbspDownload CV</a>
 								</div>
 								<div class="spacer d-md-none d-lg-none" data-height="30"></div>
 							</div>
@@ -328,6 +327,10 @@ window.onload = function () {
 		document.getElementById("home").classList.add('light'); 
 		document.getElementById("theme-switch-btn-mobile").classList.add('light');
 		document.getElementById("theme-switch-btn").classList.add('light');
+		document.getElementById("my_info").classList.remove('bg-dark');
+		document.getElementById("my_info").classList.add('bg-light');
+		document.getElementById("my_info").classList.remove('shadow-light');
+		document.getElementById("my_info").classList.add('shadow-dark');
 	}
     if (localStorage.getItem("preference-theme") === 'dark') {
     	return
@@ -358,6 +361,11 @@ function ToggleTheme(){
 		document.getElementById("home").classList.add('light'); 
 		document.getElementById("theme-switch-btn-mobile").classList.add('light');
 		document.getElementById("theme-switch-btn").classList.add('light');
+		document.getElementById("my_info").classList.remove('bg-dark');
+		document.getElementById("my_info").classList.add('bg-light');
+		document.getElementById("my_info").classList.remove('shadow-light');
+		document.getElementById("my_info").classList.add('shadow-dark');
+
 	   	localStorage.setItem("preference-theme", "light");
 	}
 	else if (value == 'light'){
@@ -371,6 +379,10 @@ function ToggleTheme(){
 		document.getElementById("home").classList.remove('light');
 		document.getElementById("theme-switch-btn-mobile").classList.remove('light');
 		document.getElementById("theme-switch-btn").classList.remove('light');
+		document.getElementById("my_info").classList.add('bg-dark');
+		document.getElementById("my_info").classList.remove('bg-light');
+		document.getElementById("my_info").classList.add('shadow-light');
+		document.getElementById("my_info").classList.remove('shadow-dark');
 		localStorage.setItem("preference-theme", "dark");
     }
 }

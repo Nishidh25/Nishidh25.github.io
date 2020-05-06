@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 @font-face {
   font-family: 'simple-line-icons';
   src: url('../font/Simple-Line-Icons.ttf') format('truetype');
@@ -52,6 +52,7 @@ img {
 .roundit {
   border-radius: 50%;
 }
+
 
 /*=================================================================*/
 /*                      TYPOGRAPHY                              
