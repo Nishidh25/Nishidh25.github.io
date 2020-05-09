@@ -34,16 +34,7 @@ $(window).on('load', function() {
               return
             }
         }
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-          var currentScrollPos = window.pageYOffset;
-          if (prevScrollpos > currentScrollPos) {
-            document.getElementById("mobile_header").style.top = "0";
-          } else {
-            document.getElementById("mobile_header").style.top = "-450px";
-          }
-          prevScrollpos = currentScrollPos;
-        }
+
 
        var toggle = function ToggleTheme(){
           var value = localStorage.getItem('preference-theme');
@@ -92,14 +83,24 @@ $(window).on('load', function() {
             }
         }
 
-
-
         document.getElementById("theme-switch-btn").onclick = toggle
         document.getElementById("theme-switch-btn-mobile").onclick = toggle
+
+
+                var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+          var currentScrollPos = window.pageYOffset;
+          if (prevScrollpos > currentScrollPos) {
+            document.getElementById("mobile_header").style.top = "0";
+          } else {
+            document.getElementById("mobile_header").style.top = "-450px";
+          }
+          prevScrollpos = currentScrollPos;
+        }
     /*=========================================================================
         Preloader
     =========================================================================*/
-    $("#preloader").delay(350).fadeOut('slow');
+    $("#preloader").delay(550).fadeOut('slow');
     // Because only Chrome supports offset-path, feGaussianBlur for now
     var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 

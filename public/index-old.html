@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -242,7 +242,7 @@
 			<!-- row end -->
 
       <div class="spacer" data-height="70"></div>
-      <h3 class="section-title wow fadeInUp">Skills</h3>
+      
       <div class="row">
         
         <div class="col-md-3 col-sm-6">
@@ -294,79 +294,8 @@
 
       </div>
 
-
-			<div class="row">
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images\client-1-light.svg" alt="client-name">
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images\client-2-light.svg" alt="client-name">
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images\client-3-light.svg" alt="client-name">
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images\client-4-light.svg" alt="client-name">
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images\client-5-light.svg" alt="client-name">
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images\client-6-light.svg" alt="client-name">
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images\client-7-light.svg" alt="client-name">
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images\client-8-light.svg" alt="client-name">
-						</div>
-					</div>
-				</div>
-			</div>
-
     </div>
 		
-
-
-
 	</section>
 	
 <!-- section works -->
@@ -400,7 +329,7 @@
 			</div>
 			
 			<!-- portolio wrapper -->
-			<div class="row portfolio-wrapper" id = 'row-wrapper'>
+			<div class="row portfolio-wrapper" id = "row-wrapper">
 				
 				<!-- portfolio item -->
 				<div class="col-md-4 col-sm-6 grid-item courses github">
@@ -436,6 +365,7 @@
 						</div>
 					</div>
 				</div>
+							
 		</div>
 
 	</section>
@@ -462,15 +392,23 @@
 <script src="js\infinite-scroll.min.js"></script>
 <script src="js\imagesloaded.pkgd.min.js"></script>
 <script src="js\slick.min.js"></script>
+<script src="js\contact.js"></script>
 <script src="js\validator.js"></script>
 <script src="js\wow.min.js"></script>
 <script src="js\morphext.min.js"></script>
 <script src="js\parallax.min.js"></script>
 <script src="js\jquery.magnific-popup.min.js"></script>
 <script src="js\custom.js"></script>
-<script src="js\firestore.js"></script>
+<!--<script src="js\firestore.js"></script>-->
+<script src="js\themehelper.js"></script>
 
 <script type="text/javascript">
+	(function(){
+//const firebase = require("firebase");
+// Required for side-effects
+//require("firebase/firestore");
+
+// Initialize Cloud Firestore through Firebase
 firebase.initializeApp({
     apiKey: "AIzaSyCrVZw3CWbkezlaXnpq_L7NhJxLJhQ-eUs",
     authDomain: "web-profile-a5b47.firebaseapp.com",
@@ -484,17 +422,18 @@ var db = firebase.firestore();
 //        console.log(`${doc.id} => ${doc.data()}`);
 //    });
 //});    
-function abc(db){
-var size;
 
-db.collection('work').get().then(snap => {
+ if (localStorage.getItem("db-got") === null) {
+ 	   
+   localStorage.setItem("db-got", "got")
+   db.collection('work').get().then(snap => {
    size = snap.size // will return the collection size
    console.log("Size = ", size)
+    for (var i = 1; i <= size+2; i++) {
+  	console.log("i = ", i);
+  	document.getElementById("row-wrapper").innerHTML += ' <div class="col-md-4 col-sm-6 grid-item courses github"><div class="blog-item rounded bg-dark shadow-light wow fadeIn" id = "dl'+i+'"><div class="thumb"><a href="#small-dialog" class="work-content"><div class="portfolio-item roundedtop shadow-dark"><div class="details"><span class="term">Course</span><h4 class="title">Deep Learning Specialization</h4></div><div class="thumb"><img src="images/deep-learning-spec.PNG" alt="Portfolio-title"><div class="mask"></div></div></div></a><div id="small-dialog" class="white-popup zoom-anim-dialog mfp-hide"><img src="images/deep-learning-spec.PNG" alt="Title"><h2></h2><p></p><p></p><a href="https://coursera.org/verify/specialization/FWSFNRS2HV24" target="_blank" class="btn btn-default">Verify</a></div></div><div class="details"><h4 class="my-0 title"><a href="#">Deep Learning Specialization</a></h4><ul class="list-inline meta mb-0 mt-2"><li class="list-inline-item">28 April, 2020</li><li class="list-inline-item">deeplearning.ai</li></ul></div></div></div> ';}
 });
-
 }
-
-abc(db);
 db.collection("work").doc("1")
   .get()
   .then(function(doc) {
@@ -508,13 +447,11 @@ db.collection("work").doc("1")
     console.log("Error getting document:", error);
   });
 
-
+}())
 
 
 
 </script>
-
-
 
 </body>
 </html>

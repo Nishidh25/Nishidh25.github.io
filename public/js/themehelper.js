@@ -1,3 +1,4 @@
+
 (function(){
 
 window.onload = function () {
@@ -7,11 +8,11 @@ window.onload = function () {
     }
     if (localStorage.getItem("preference-theme") === 'light') {
       // Toggle from dark to light if prefered theme is white 
-      document.getElementById("preloader").classList.add('light');
-      document.getElementById("mobile_header").classList.add('light');
-      document.getElementById("mobile_navbar").classList.remove('navbar-dark');
-      document.getElementById("mobile_navbar").classList.add('navbar-light');
-      document.getElementById("body_theme").classList.remove('dark');
+    document.getElementById("preloader").classList.add('light');
+    document.getElementById("mobile_header").classList.add('light');
+    document.getElementById("mobile_navbar").classList.remove('navbar-dark');
+    document.getElementById("mobile_navbar").classList.add('navbar-light');
+    document.getElementById("body_theme").classList.remove('dark');
     document.getElementById("body_theme").classList.add('light');
     document.getElementById("desktop_head").classList.add('light');
     document.getElementById("home").classList.add('light'); 
